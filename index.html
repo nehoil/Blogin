@@ -10,6 +10,8 @@
 
 <body>
     <div class="screen" onclick="toggleMenu()">X</div>
+    <div class="screen-read-more" onclick="toggleReadMore()">X</div>
+
 
     <header class="main-header">
 
@@ -39,7 +41,7 @@
                     pariatur...
                 </p>
                 <div class="card-btn">
-                    <button><span>Continue Reading</span></button>
+                    <button onclick="toggleReadMore()"><span>Continue Reading</span></button>
                 </div>
             </div>
         </div>
@@ -55,7 +57,7 @@
                     pariatur...
                 </p>
                 <div class="card-btn">
-                    <button><span>Continue Reading</span></button>
+                    <button onclick="toggleReadMore()"><span>Continue Reading</span></button>
                 </div>
             </div>
         </div>
@@ -71,7 +73,7 @@
                     pariatur...
                 </p>
                 <div class="card-btn">
-                    <button><span>Continue Reading</span></button>
+                    <button onclick="toggleReadMore()"><span>Continue Reading</span></button>
                 </div>
             </div>
         </div>
@@ -80,6 +82,21 @@
             <div class="next"><a href="#">Next →</a></div>
         </div>
     </main>
+    <div class="read-more">
+        <div class="read-more-content">
+            <h2 class="card-title">Duis aute irure dolor in
+                henderit in voluptate.</h2>
+            <p class="card-text">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur...
+            </p>
+            <div class="read-more-btn">
+                <button onclick="toggleReadMore()"><span>Close</span></button>
+            </div>
+        </div>
+    </div>
     <footer class="main-footer">
         <div class="footer-content container">
             <div class="footer-logo">
@@ -90,12 +107,16 @@
             </div>
             <div class="footer-socials">
                 <ul class="main-socials clean-list flex align-center">
-                    <li class="flex align-center fb"><a href="#"><img src="./img/facebook-16.png" alt="" srcset=""></a></li>
-                    <li class="flex align-center tw"><a href="#"><img src="./img/twitter-16.png" alt="" srcset=""></a></li>
-                    <li class="flex align-center ig"><a href="#"><img src="./img/instagram-16.png" alt="" srcset=""></a></li>
-                    <li class="flex align-center lkd"><a href="#"><img src="./img/linkedin-16.png" alt="" srcset=""></a></li>
+                    <li class="flex align-center fb"><a href="#"><img src="./img/facebook-16.png" alt="" srcset=""></a>
+                    </li>
+                    <li class="flex align-center tw"><a href="#"><img src="./img/twitter-16.png" alt="" srcset=""></a>
+                    </li>
+                    <li class="flex align-center ig"><a href="#"><img src="./img/instagram-16.png" alt="" srcset=""></a>
+                    </li>
+                    <li class="flex align-center lkd"><a href="#"><img src="./img/linkedin-16.png" alt="" srcset=""></a>
+                    </li>
                 </ul>
-                </div>
+            </div>
         </div>
     </footer>
     <script src="./js/main.js"></script>
