@@ -1,0 +1,502 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Fontface */
+
+@font-face {
+  font-family: lato;
+  src: url(/fonts/lato/Lato-Regular.ttf);
+}
+
+/* BASIC */
+
+html {
+  font-family: lato, serif;
+  color: #606060;
+}
+
+body {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Layout */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-aside-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 2.56rem;
+}
+
+/* .card-container > * {
+    flex-basis: 100%;
+} */
+
+/* Components */
+
+/* SCREENS */
+
+.screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+body.menu-open .screen {
+  visibility: visible;
+  opacity: 0.8;
+}
+/* header */
+
+header {
+  background-color: #292929;
+}
+
+.main-header .main-nav li {
+  padding: 0;
+  font-size: 1rem;
+  border: 0.5px solid #1f1f1f;
+  border-top: none;
+  border-bottom: none;
+  width: 130px;
+  height: 130px;
+  font-weight: 700;
+  justify-content: center;
+  cursor: pointer;
+}
+.main-header .main-nav li:hover {
+  border-bottom: 0.5rem solid #58c83a;
+  transition: 0.3s;
+}
+
+.main-header .main-nav li a {
+  text-decoration: none;
+  color: #c6c6c6;
+}
+
+.main-header .main-nav a:hover {
+  color: #58c83a;
+}
+/* Cards  */
+
+.card:first-of-type {
+  padding-top: 5rem;
+}
+
+.card:not(:last-of-type) {
+  padding-bottom: 5rem;
+}
+
+.card-title {
+  color: #4f4e4e;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card p {
+  padding: 0;
+  margin: 0;
+}
+
+.card button {
+  border: 1px solid #c2c2c2;
+  color: #c2c2c2;
+  background-color: #fff;
+  border-radius: 5rem;
+  padding: 0.75rem 1.625rem;
+  font-size: 1rem;
+  letter-spacing: 0.48px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.card button:hover span {
+  display: none;
+}
+
+.card button:hover {
+  border: 1px solid #64cd49;
+  color: #64cd49;
+  transition: 0.3s;
+}
+
+.card button:hover:before {
+  content: "Cointinue Reading →";
+}
+
+.card-text {
+  font-size: 1rem;
+  padding: 0;
+  margin-top: 3.62rem;
+  margin-block-start: 2.75rem;
+}
+
+.card-container .card-image {
+  height: 307px;
+  object-fit: cover;
+}
+
+/* Pagnation */
+
+.pagenation-container {
+  height: 4.625rem;
+  width: 100%;
+  font-size: 1.25rem;
+  border-top: 1px solid #e1e0e0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0 1.875rem;
+}
+
+.pagenation-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pagenation-container a:hover {
+  cursor: pointer;
+  color: #64cd49;
+}
+
+/* Footer */
+
+footer {
+  background-color: #f8f8f8;
+  padding-top: 5rem;
+  border-top: 1px solid #e1e0e0;
+}
+
+.footer-content > :not(:last-child) {
+  margin-bottom: 2.187rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+/* Socials */
+footer .main-socials li {
+  padding: 0;
+  font-size: 1rem;
+  background-color: #e5e5e5;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 700;
+  justify-content: center;
+  cursor: pointer;
+  margin-inline-end: 1.25rem;
+  margin-block-end: 5rem;
+}
+
+footer .main-socials li:hover {
+  transition: 0.3s;
+}
+
+footer .main-socials li a {
+  text-decoration: none;
+  color: #c6c6c6;
+}
+
+footer .main-socials a:hover {
+  color: #58c83a;
+}
+
+.ig:hover {
+  background-color: #e95950;
+}
+.fb:hover {
+  background-color: #4267b2;
+}
+.tw:hover {
+  background-color: #1da1f2;
+}
+.lkd:hover {
+  background-color: #2867b2;
+}
+
+/* Helpers */
+
+/* flex helpers */
+
+.flex {
+  display: flex;
+}
+
+.flex.space-between {
+  justify-content: space-between;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+/* list-helpers */
+
+.clean-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Border Helper */
+
+.lrb-borders {
+  border-bottom: 1px solid #e1e0e0;
+  border-right: 1px solid #e1e0e0;
+  border-left: 1px solid #e1e0e0;
+}
+
+/* Extra Narrow */
+
+@media (min-width: 200px) {
+  .main-header {
+    padding: 10px 0;
+  }
+  body.menu-open .main-header .main-nav {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .main-header button {
+    position: absolute;
+    right: 0.5rem;
+  }
+  .main-header .main-nav li {
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 1rem;
+    border: 0.5px solid #1f1f1f;
+    margin-top: 0.5rem;
+    margin-right: 0;
+    height: 80px;
+    width: 80%;
+    font-weight: 700;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .main-nav {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s;
+    margin-right: 0;
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    position: fixed;
+    top: 2rem;
+    right: 0;
+  }
+
+  .card p {
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  .card:first-of-type {
+    padding-top: 1.5rem;
+  }
+
+  .container {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    border-color: rgb(76, 224, 56);
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container .card-image {
+    padding-bottom: 1rem;
+    /* min-height: 307px; */
+    max-width: 15rem;
+    min-height: 50%;
+    object-fit: cover;
+  }
+  .card-title {
+    margin-bottom: 0.625rem;
+    font-size: 1.6rem;
+  }
+  .card-aside-content {
+    padding: 0;
+  }
+}
+
+/* Narrow */
+
+@media (min-width: 880px) {
+  .main-header button {
+    display: none;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .container {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    border-color: blue;
+  }
+  .card-container .card-image {
+    max-width: 40%;
+    display: block;
+    height: auto;
+  }
+  .card-aside-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 2.56rem;
+  }
+}
+
+/* Normal */
+
+@media (min-width: 1100px) {
+  .main-header .main-nav li {
+    padding: 0;
+    font-size: 1rem;
+    border: 0.5px solid #1f1f1f;
+    border-top: none;
+    border-bottom: none;
+    width: 130px;
+    height: 130px;
+    font-weight: 700;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .main-nav {
+    flex-direction: row;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .main-header button {
+    display: none;
+  }
+  .main-header .main-nav li {
+    padding: 0;
+    font-size: 1rem;
+    border: 0.5px solid #1f1f1f;
+    border-top: none;
+    border-bottom: none;
+    width: 130px;
+    height: 130px;
+    font-weight: 700;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .container {
+    padding: 0;
+    border-color: red;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .card:first-of-type {
+    padding-top: 5rem;
+  }
+
+  .card:not(:last-of-type) {
+    padding-bottom: 5rem;
+  }
+
+  .card-title {
+    color: #4f4e4e;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .card p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .card button {
+    position: absolute;
+    border: 1px solid #c2c2c2;
+    color: #c2c2c2;
+    background-color: #fff;
+    border-radius: 5rem;
+    padding: 0.75rem 1.625rem;
+    font-size: 1rem;
+    letter-spacing: 0.48px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .card button:hover span {
+    display: none;
+  }
+
+  .card button:hover {
+    border: 1px solid #64cd49;
+    color: #64cd49;
+    transition: 0.3s;
+  }
+
+  .card button:hover:before {
+    content: "Cointinue Reading →";
+  }
+
+  .card-text {
+    font-size: 1rem;
+    padding: 0;
+    margin-top: 3.62rem;
+    margin-block-start: 2.75rem;
+  }
+
+  .card-container .card-image {
+    height: 307px;
+    object-fit: cover;
+  }
+  .card-aside-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 2.56rem;
+  }
+}
+
+@media (max-width: 880px) {
+}
